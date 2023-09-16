@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Forms / Layouts - NiceAdmin Bootstrap Template</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+   <link rel="stylesheet" href="assets/css/tab.css">
+   <link rel="stylesheet" href="assets/css/chat.css">
+
+  <!-- =======================================================
+  * Template Name: NiceAdmin
+  * Updated: Jul 27 2023 with Bootstrap v5.3.1
+  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/first-chat.png" alt="">
+        <span class="d-none d-lg-block"></span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div><!-- End Logo -->
+
+    <div class="search-bar">
+      <form class="search-form d-flex align-items-center" method="POST" action="#">
+        <input type="text" name="query" placeholder="Search" title="Enter search keyword">
+        <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+      </form>
+    </div><!-- End Search Bar -->
+
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+
+        <li class="nav-item d-block d-lg-none">
+          <a class="nav-link nav-icon search-bar-toggle " href="#">
+            <i class="bi bi-search"></i>
+          </a>
+        </li><!-- End Search Icon-->
+
+        <li class="nav-item dropdown">
+
+          <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+            <i class="bi bi-bell"></i>
+            <span class="badge bg-primary badge-number">4</span>
+          </a><!-- End Notification Icon -->
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
+            <li class="dropdown-header">
+              You have 4 new notifications
+              <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="notification-item">
+              <i class="bi bi-exclamation-circle text-warning"></i>
+              <div>
+                <h4>Lorem Ipsum</h4>
+                <p>Quae dolorem earum veritatis oditseno</p>
+                <p>30 min. ago</p>
+              </div>
+            </li>
+
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="notification-item">
+              <i class="bi bi-x-circle text-danger"></i>
+              <div>
+                <h4>Atque rerum nesciunt</h4>
+                <p>Quae dolorem earum veritatis oditseno</p>
+                <p>1 hr. ago</p>
+              </div>
+            </li>
+
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="notification-item">
+              <i class="bi bi-check-circle text-success"></i>
+              <div>
+                <h4>Sit rerum fuga</h4>
+                <p>Quae dolorem earum veritatis oditseno</p>
+                <p>2 hrs. ago</p>
+              </div>
+            </li>
+
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="notification-item">
+              <i class="bi bi-info-circle text-primary"></i>
+              <div>
+                <h4>Dicta reprehenderit</h4>
+                <p>Quae dolorem earum veritatis oditseno</p>
+                <p>4 hrs. ago</p>
+              </div>
+            </li>
+
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li class="dropdown-footer">
+              <a href="#">Show all notifications</a>
+            </li>
+
+          </ul><!-- End Notification Dropdown Items -->
+
+        </li><!-- End Notification Nav -->
+
+        <li class="nav-item dropdown">
+
+          <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+            <i class="bi bi-chat-left-text"></i>
+            <span class="badge bg-success badge-number">3</span>
+          </a><!-- End Messages Icon -->
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow messages">
+            <li class="dropdown-header">
+              You have 3 new messages
+              <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="message-item">
+              <a href="#">
+                <img src="assets/img/messages-1.jpg" alt="" class="rounded-circle">
+                <div>
+                  <h4>Maria Hudson</h4>
+                  <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
+                  <p>4 hrs. ago</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="message-item">
+              <a href="#">
+                <img src="assets/img/messages-2.jpg" alt="" class="rounded-circle">
+                <div>
+                  <h4>Anna Nelson</h4>
+                  <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
+                  <p>6 hrs. ago</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="message-item">
+              <a href="#">
+                <img src="assets/img/messages-3.jpg" alt="" class="rounded-circle">
+                <div>
+                  <h4>David Muldon</h4>
+                  <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
+                  <p>8 hrs. ago</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="dropdown-footer">
+              <a href="#">Show all messages</a>
+            </li>
+
+          </ul><!-- End Messages Dropdown Items -->
+
+        </li><!-- End Messages Nav -->
+
+        <li class="nav-item dropdown pe-3">
+
+          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+            <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+            <span class="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span>
+          </a><!-- End Profile Iamge Icon -->
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+            <li class="dropdown-header">
+              <h6>Kevin Anderson</h6>
+              <span>Web Designer</span>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                <i class="bi bi-person"></i>
+                <span>My Profile</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                <i class="bi bi-gear"></i>
+                <span>Account Settings</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
+                <i class="bi bi-question-circle"></i>
+                <span>Need Help?</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="#">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>Sign Out</span>
+              </a>
+            </li>
+
+          </ul><!-- End Profile Dropdown Items -->
+        </li><!-- End Profile Nav -->
+
+      </ul>
+    </nav><!-- End Icons Navigation -->
+
+  </header><!-- End Header -->
+
+
+   <!-- ======= Sidebar ======= -->
+   <aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+      <li class="nav-item">
+        <a class="nav-link " href="index.html">
+          <i class="bi bi-grid"></i>
+          <span>Dashboard</span>
+        </a>
+      </li><!-- End Dashboard Nav -->
+
+  
+      <!-- <li class="nav-heading">Pages</li> -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="chat.html">
+          <i class="bi bi-person"></i>
+          <span>Chats</span>
+        </a>
+      </li><!-- End Profile Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="bot.html">
+          <i class="bi bi-question-circle"></i>
+          <span>Bots</span>
+        </a>
+      </li><!-- End F.A.Q Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="lead.html">
+          <i class="bi bi-envelope"></i>
+          <span>Leads</span>
+        </a>
+      </li><!-- End Contact Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="setting.html">
+          <i class="bi bi-gear"></i>
+          <span>Settings</span>
+        </a>
+      </li><!-- End Register Page Nav -->
+
+     
+    </ul>
+
+  </aside><!-- End Sidebar-->
+
+
+ 
+  <main id="" class="tab-main">
+
+    <!-- <div class="pagetitle">
+      <h1>Form Layouts</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item">Forms</li>
+          <li class="breadcrumb-item active">Layouts</li>
+        </ol>
+      </nav> -->
+    </div><!-- End Page Title -->
+    <section class="section">
+      <div class="row">
+        
+            
+        <div class="wrapper">
+            <div class="container d-flex ">
+                <div class="left">
+                    <div class="top">
+                      <div class="hstack justify-content-between">
+                         <h1 class="card-title">Chat</h1>
+                           <i class="three-dots-vertical" style="font-size: 14px;"></i>
+                      </div>  
+                    </div>
+                    <!-- chat tab header -->
+                    
+                    <ul class="nav nav-tabs nav-tabs-bordered d-flex" id="borderedTabJustified" role="tablist">
+                      <li class="nav-item flex-fill" role="presentation">
+                        <button class="nav-link w-100 active" id="home-tab" data-bs-toggle="tab" data-bs-target="#bordered-justified-home" type="button" role="tab" aria-controls="home" aria-selected="true">All</button>
+                      </li>
+                      <li class="nav-item flex-fill" role="presentation">
+                        <button class="nav-link w-100" id="profile-tab" data-bs-toggle="tab" data-bs-target="#bordered-justified-profile" type="button" role="tab" aria-controls="profile" aria-selected="false">unread</button>
+                      </li>
+                      <li class="nav-item flex-fill" role="presentation">
+                        <button class="nav-link w-100" id="contact-tab" data-bs-toggle="tab" data-bs-target="#bordered-justified-contact" type="button" role="tab" aria-controls="contact" aria-selected="false">unresolved</button>
+                      </li>
+                    </ul>
+                    <!-- chat tab end -->
+              <div class="tab-content pt-2" id="borderedTabJustifiedContent">
+                    <ul class="tab-pane fade show active people" id="bordered-justified-home" role="tabpanel" aria-labelledby="home-tab">
+                        <li class="person" data-chat="person1">
+                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/382994/thomas.jpg" alt="" />
+                            <span class="name">Thomas Bangalter</span>
+                            <span class="time">2:09 PM</span>
+                            <span class="preview">I was wondering...</span>
+                        </li>
+                        <li class="person" data-chat="person2">
+                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/382994/dog.png" alt="" />
+                            <span class="name">Dog Woofson</span>
+                            <span class="time">1:44 PM</span>
+                            <span class="preview">I've forgotten how it felt before</span>
+                        </li>
+                        <li class="person" data-chat="person3">
+                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/382994/louis-ck.jpeg" alt="" />
+                            <span class="name">Louis CK</span>
+                            <span class="time">2:09 PM</span>
+                            <span class="preview">But we’re probably gonna need a new carpet.</span>
+                        </li>
+                        <li class="person" data-chat="person4">
+                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/382994/bo-jackson.jpg" alt="" />
+                            <span class="name">Bo Jackson</span>
+                            <span class="time">2:09 PM</span>
+                            <span class="preview">It’s not that bad...</span>
+                        </li>
+                        <li class="person" data-chat="person5">
+                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/382994/michael-jordan.jpg" alt="" />
+                            <span class="name">Michael Jordan</span>
+                            <span class="time">2:09 PM</span>
+                            <span class="preview">Wasup for the third time like iyou blind bitch</span>
+                        </li>
+                        <li class="person" data-chat="person6">
+                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/382994/drake.jpg" alt="" />
+                            <span class="name">Drake</span>
+                            <span class="time">2:09 PM</span>
+                            <span class="preview">howdoyoudoaspace</span>
+                        </li>
+                    </ul>
+                    <ul class="tab-pane fade show active people" id="bordered-justified-profile" role="tabpanel" aria-labelledby="profile-tab">
+                      <li class="person" data-chat="person1">
+                          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/382994/thomas.jpg" alt="" />
+                          <span class="name">Thomas Bangalter</span>
+                          <span class="time">2:09 PM</span>
+                          <span class="preview">I was wondering...</span>
+                      </li>
+                      <li class="person" data-chat="person2">
+                          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/382994/dog.png" alt="" />
+                          <span class="name">Dog Woofson</span>
+                          <span class="time">1:44 PM</span>
+                          <span class="preview">I've forgotten how it felt before</span>
+                      </li>
+                      <li class="person" data-chat="person3">
+                          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/382994/louis-ck.jpeg" alt="" />
+                          <span class="name">Louis CK</span>
+                          <span class="time">2:09 PM</span>
+                          <span class="preview">But we’re probably gonna need a new carpet.</span>
+                      </li>
+                      
+                      <li class="person" data-chat="person4">
+                          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/382994/bo-jackson.jpg" alt="" />
+                          <span class="name">Bo Jackson</span>
+                          <span class="time">2:09 PM</span>
+                          <span class="preview">It’s not that bad...</span>
+                      </li>
+                      <li class="person" data-chat="person5">
+                          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/382994/michael-jordan.jpg" alt="" />
+                          <span class="name">Michael Jordan</span>
+                          <span class="time">2:09 PM</span>
+                          <span class="preview">Wasup for the third time like iyou blind bitch</span>
+                      </li>
+                      <li class="person" data-chat="person6">
+                          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/382994/drake.jpg" alt="" />
+                          <span class="name">Drake</span>
+                          <span class="time">2:09 PM</span>
+                          <span class="preview">howdoyoudoaspace</span>
+                      </li>
+                  </ul>
+                  <ul class="tab-pane fade show active people" id="bordered-justified-contact" role="tabpanel" aria-labelledby="contact-tab">
+                    <li class="person" data-chat="person1">
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/382994/thomas.jpg" alt="" />
+                        <span class="name">Thomas Bangalter</span>
+                        <span class="time">2:09 PM</span>
+                        <span class="preview">I was wondering...</span>
+                    </li>
+                    <li class="person" data-chat="person2">
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/382994/dog.png" alt="" />
+                        <span class="name">Dog Woofson</span>
+                        <span class="time">1:44 PM</span>
+                        <span class="preview">I've forgotten how it felt before</span>
+                    </li>
+                    <li class="person" data-chat="person3">
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/382994/louis-ck.jpeg" alt="" />
+                        <span class="name">Louis CK</span>
+                        <span class="time">2:09 PM</span>
+                        <span class="preview">But we’re probably gonna need a new carpet.</span>
+                    </li>
+                    <li class="person" data-chat="person4">
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/382994/bo-jackson.jpg" alt="" />
+                        <span class="name">Bo Jackson</span>
+                        <span class="time">2:09 PM</span>
+                        <span class="preview">It’s not that bad...</span>
+                    </li>
+                    <li class="person" data-chat="person5">
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/382994/michael-jordan.jpg" alt="" />
+                        <span class="name">Michael Jordan</span>
+                        <span class="time">2:09 PM</span>
+                        <span class="preview">Wasup for the third time like iyou blind bitch</span>
+                    </li>
+                    <li class="person" data-chat="person6">
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/382994/drake.jpg" alt="" />
+                        <span class="name">Drake</span>
+                        <span class="time">2:09 PM</span>
+                        <span class="preview">howdoyoudoaspace</span>
+                    </li>
+                </ul>
+              </div><!-- End Bordered Tabs Justified -->
+            </div>
+                <div class="middle">
+                    <div class="top"><span><span class="name">Mark this coversation as resolved</span></span></div>
+                    <div class="chat" data-chat="person1">
+                        <div class="conversation-start">
+                            <span>Today, 6:48 AM</span>
+                        </div>
+                        <div class="bubble you">
+                            Hello,
+                        </div>
+                        <div class="bubble you">
+                            it's me.
+                        </div>
+                        <div class="bubble you">
+                            I was wondering...
+                        </div>
+                    </div>
+                    <div class="chat" data-chat="person2">
+                        <div class="conversation-start">
+                            <span>Today, 5:38 PM</span>
+                        </div>
+                        <div class="bubble you">
+                            Hello, can you hear me?
+                        </div>
+                        <div class="bubble you">
+                            I'm in California dreaming
+                        </div>
+                        <div class="bubble me">
+                            ... about who we used to be.
+                        </div>
+                        <div class="bubble me">
+                            Are you serious?
+                        </div>
+                        <div class="bubble you">
+                            When we were younger and free...
+                        </div>
+                        <div class="bubble you">
+                            I've forgotten how it felt before
+                        </div>
+                    </div>
+                    <div class="chat" data-chat="person3">
+                        <div class="conversation-start">
+                            <span>Today, 3:38 AM</span>
+                        </div>
+                        <div class="bubble you">
+                            Hey human!
+                        </div>
+                        <div class="bubble you">
+                            Umm... Someone took a shit in the hallway.
+                        </div>
+                        <div class="bubble me">
+                            ... what.
+                        </div>
+                        <div class="bubble me">
+                            Are you serious?
+                        </div>
+                        <div class="bubble you">
+                            I mean...
+                        </div>
+                        <div class="bubble you">
+                            It’s not that bad...
+                        </div>
+                        <div class="bubble you">
+                            But we’re probably gonna need a new carpet.
+                        </div>
+                    </div>
+                    <div class="chat" data-chat="person4">
+                        <div class="conversation-start">
+                            <span>Yesterday, 4:20 PM</span>
+                        </div>
+                        <div class="bubble me">
+                            Hey human!
+                        </div>
+                        <div class="bubble me">
+                            Umm... Someone took a shit in the hallway.
+                        </div>
+                        <div class="bubble you">
+                            ... what.
+                        </div>
+                        <div class="bubble you">
+                            Are you serious?
+                        </div>
+                        <div class="bubble me">
+                            I mean...
+                        </div>
+                        <div class="bubble me">
+                            It’s not that bad...
+                        </div>
+                    </div>
+                    <div class="chat" data-chat="person5">
+                        <div class="conversation-start">
+                            <span>Today, 6:28 AM</span>
+                        </div>
+                        <div class="bubble you">
+                            Wasup
+                        </div>
+                        <div class="bubble you">
+                            Wasup
+                        </div>
+                        <div class="bubble you">
+                            Wasup for the third time like is <br />you blind bitch
+                        </div>
+        
+                    </div>
+                    <div class="chat" data-chat="person6">
+                        <div class="conversation-start">
+                            <span>Monday, 1:27 PM</span>
+                        </div>
+                        <div class="bubble you">
+                            So, how's your new phone?
+                        </div>
+                        <div class="bubble you">
+                            You finally have a smartphone :D
+                        </div>
+                        <div class="bubble me">
+                            Drake?
+                        </div>
+                        <div class="bubble me">
+                            Why aren't you answering?
+                        </div>
+                        <div class="bubble you">
+                            howdoyoudoaspace
+                        </div>
+                    </div>
+                    <div class="write">
+                        <a href="javascript:;" class="write-link attach"></a>
+                        <input type="text" />
+                        <a href="javascript:;" class="write-link smiley"></a>
+                        <a href="javascript:;" class="write-link send"></a>
+                    </div>
+                </div>
+                <div class="right vstack">
+                  <div class="top">
+                    <div class="card">
+                      <div class="profile-card  vstack justify-content-center align-items-center">
+                        <img src="assets/img/profile-img.jpg " style="width: 50px;" alt="Profile" class="rounded-circle">
+                         <h6 class="lead mb-1">Kevin Anderson</h6>
+                         <p class="small mt-0">anderson@gmail.com</p>
+                         <p class="small fw-light">cleanwater, fl</p>
+                        <button class="chat-btn fs-6 ">view mail profile</button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end of top right -->
+                  <div class="right-body">
+                    <div class="vstack p-3">
+                  <div class="hstack justify-content-between">
+                    <p class="card-title fs-6 fw-lighter p-2">Assign operator</p>
+                     <i class="bi bi-chevron-up p-3"></i>
+                     </div>
+                     <div class="hstack">
+                      <img src="assets/img/messages-1.jpg " style="width: 30px; margin-right: 8px;" alt="Profile" class="rounded-circle">
+                        <p class="name">serri baraqui</p>
+                        <p style="margin-left: 43px; color: rgb(236, 120, 120);">reassign</p>
+                     </div>
+                     </div>
+
+                     <div class="d-flex flex-column p-3 ">
+                      <div class="hstack"  style="margin-top: 0px;">
+                        <p class="card-title fs-6 fw-lighter p-2">main information</p>
+                         <i class="bi bi-chevron-up p-3"></i>
+                         </div>
+                         <div class="" style="">
+                         <i class="bi bi-geo-alt-fill col-6 " style="color: rgb(197, 125, 197); margin-right:0px;"></i>
+                            <span style="font-size: 12px; padding-bottom:24px; margin-right: 80px;" class="fw-lighter col-6">clean water fl,state</span>
+                         </div>
+                         <div class="">
+                          <i class="bi bi-clock  " style="color: rgb(197, 125, 197); margin-right:0px;"></i>
+                             <span style="font-size: 12px; padding-bottom:24px; margin-right: 80px;" class="fw-lighter">3:04</span>
+                          </div>
+                          <div class="">
+                            <i class="bi bi-globe  " style="color: rgb(197, 125, 197); margin-right:0px;"></i>
+                           <span> <i class="bi bi-globe-americas  " style="color: rgb(197, 125, 197); margin-right:0px;"></i></span>
+
+                            </div>
+                         </div>
+                     
+                         <div class="d-flex flex-column p-3  ">
+                          <div class="hstack"  style="margin-top: 0px;">
+                            <p class="card-title fs-6 fw-lighter p-2">Visitor Device</p>
+                             <i class="bi bi-chevron-up p-3"></i>
+                             </div>
+                             <div class="" style="">
+                             <i class="bi bi-browser-chrome " style="color: rgb(197, 125, 197); margin-right:0px;"></i>
+                                <span style="font-size: 10px; padding-bottom:24px; margin-right: 80px;" class="fw-light ">chrom 14, on windows</span>
+                             </div>
+                             <div class="">
+                              <i class="bi bi-cloud " style="color: rgb(197, 125, 197); margin-right:0px;"></i>
+                                 <span style="font-size: 12px; padding-bottom:24px; margin-right: 80px;" class="fw-lighter">234.3d.345.67688.23</span>
+                              </div>
+                             </div>
+
+                             <div class="vstack p-3">
+                              <div class="hstack justify-content-between">
+                                <p class="small">conversation parcitipant</p>
+                                 <i class="bi bi-plus p-3"></i>
+                                 </div>
+                                 <div class="hstack justify-content-between">
+                                  <i class="bi bi-inbox " style="color: rgb(197, 125, 197); ">mail </i> 
+                                <p style="color: rgb(231, 105, 231);" class="fw-lighter">Add</p>
+
+                                 </div>    
+                                 </div>
+                                 
+
+                  </div>
+                </div>
+
+
+            </div>
+        </div>
+                  
+             
+              
+        
+            
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+ 
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+<script>
+  document.querySelector('.chat[data-chat=person2]').classList.add('active-chat')
+document.querySelector('.person[data-chat=person2]').classList.add('active')
+
+let friends = {
+    list: document.querySelector('ul.people'),
+    all: document.querySelectorAll('.left .person'),
+    name: ''
+  },
+  chat = {
+    container: document.querySelector('.container .right'),
+    current: null,
+    person: null,
+    name: document.querySelector('.container .right .top .name')
+  }
+
+friends.all.forEach(f => {
+  f.addEventListener('mousedown', () => {
+    f.classList.contains('active') || setAciveChat(f)
+  })
+});
+
+function setAciveChat(f) {
+  friends.list.querySelector('.active').classList.remove('active')
+  f.classList.add('active')
+  chat.current = chat.container.querySelector('.active-chat')
+  chat.person = f.getAttribute('data-chat')
+  chat.current.classList.remove('active-chat')
+  chat.container.querySelector('[data-chat="' + chat.person + '"]').classList.add('active-chat')
+  friends.name = f.querySelector('.name').innerText
+  chat.name.innerHTML = friends.name
+}
+</script>
+  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/chart.js/chart.umd.js"></script>
+  <script src="assets/vendor/echarts/echarts.min.js"></script>
+  <script src="assets/vendor/quill/quill.min.js"></script>
+  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
