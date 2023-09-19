@@ -1,27 +1,60 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.template import loader
 from django.http import HttpResponse
+from django.urls import reverse
+from .forms import SignupForm
+from django.contrib.auth import authenticate, login
+
+ 
+
+
+
 
 def login(request):
-    return render(request, 'login.html', {'name': 'hammed' })
+    if request.method == "POST":
+        email = request.POST["email"]
+        password = request.POST["password"]
+
+        user = authenticate(request, username=email, password=password)
+
+        if user is not None:
+            # Authentication successful, log the user in
+            login(request, user)
+            return redirect('dashboard')  # Redirect to a dashboard page upon successful login
+        else:
+            # Authentication failed, show an error message
+            return render(request, 'login.html', {'error_message': 'Invalid email or password'})
+
+    return render(request, 'login.html')
 
 
 
-def signup(request):
-    return render(request, 'signup.html', {'name': 'hammed' })
+def user(request):
+    submitted =  False
+
+    if request.method == "POST":
+        form = SignupForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('{}?submitted=True'.format(reverse('login')))
+        else:
+            # If the form is not valid, you can handle this case as needed
+            # For example, you can re-render the form with errors
+            return render(request, 'user.html', {'form': form, 'submitted': submitted})
+
+    else:
+        form = SignupForm()
+
+    # Ensure that there's a default response (e.g., rendering a template)
+    return render(request, 'user.html', {'form': form, 'submitted': submitted})
+   
 
 
-def my_view(request):
-    font_awesome_url = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css"
-    return render(request, 'head.html', {'font_awesome_url': font_awesome_url})
-
-def header(request):
-    return render(request, 'header.html', {'name': 'hammed' })
-
-def side(request):
-    return render(request, 'side.html', {'name': 'hammed' })
+def forgot(request):
+    return render(request, 'forgot.html', {'name': 'hammed' })
 
 
-def home(request):
-    return render(request, 'home.html', {'name': 'hammed' })
+def dashboard(request):
+    return render(request, 'dashboard.html', {'name': 'hammed' })
 
 
