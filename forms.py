@@ -14,10 +14,10 @@ class SignupForm(ModelForm):
         ]
 
         widgets = {
-            'fullname': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Enter your password',}),
-            'username': forms.TextInput(attrs={'class': 'form-control','placeholder': 'Please enter a valid Email adddress!',}),
-            'email': forms.EmailInput(attrs={'class': 'form-control' , 'placeholder': 'Please, enter your name!',}),
-            'password': forms.PasswordInput(attrs={'class': 'form-control' , 'placeholder': 'Please choose a username.',})
+            'fullname': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Enter your password', 'name':'fullname'}),
+            'username': forms.TextInput(attrs={'class': 'form-control','placeholder': 'Please enter a valid username!', 'name':'username'}),
+            'email': forms.EmailInput(attrs={'class': 'form-control' , 'placeholder': 'Please, enter your email!',  'name':'email'}),
+            'password': forms.PasswordInput(attrs={'class': 'form-control' , 'placeholder': 'Enter your password.', 'name':'password'})
         }
 
 
