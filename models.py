@@ -42,3 +42,22 @@ class Choice(models.Model):
 
 # class Login_E(AbstractUser):
 #     email = models.EmailField(unique=True)
+
+
+class Page_Setting(models.Model):
+
+	# fields of the model
+	title = models.CharField(max_length = 200)
+	footertext = models.CharField(max_length = 200)
+	address = models.CharField(max_length=200)
+	email = models.EmailField(max_length=100)
+	number = models.IntegerField( max_length=100, default=20)
+	favicon = models.ImageField(upload_to='assets/img/')
+	pagelogo = models.ImageField(upload_to='assets/img/')
+	signuplogo = models.ImageField(upload_to='assets/img/')
+
+
+	# renames the instances of the model
+	# with their title name
+	def __str__(self):
+		return self.fullname
