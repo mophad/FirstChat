@@ -127,3 +127,88 @@ def vote(request, question_id):
         # with POST data. This prevents data from being posted twice if a
         # user hits the Back button.
         return HttpResponseRedirect(reverse("signup:vote", args=(question.id,)))
+
+ def appsetting(request):
+
+     if request.method == "POST":
+         form = Page_Setting(request.POST)
+         if form.is_valid():
+             form.save()
+            #  return redirect('{}?submitted=True'.format(reverse('signup:login')))
+             msg_sussess = "you have been successfuly update your App"
+             return render(request, 'custome.html', {'form': form, 'msg': msg_sussess})
+
+         else:
+            #  If the form is not valid, you can handle this case as needed
+            #  For example, you can re-render the form with errors
+             msg_error = "there was error of input detail"
+             return render(request, 'custome.html', {'form': form, 'msg': msg_error})
+
+     else:
+         form = Page_Setting()
+         empty = "you have been successfuly update your App"
+           
+    # Ensure that there's a default response (e.g., rendering a template)
+     return render(request, 'custome.html', {'form': form, 'empty': empty})
+   
+def chatbot(request):
+    return render(request , 'bot.html' )
+
+def lead(request):
+    return render(request , 'lead.html' )
+
+def setting(request):
+    return render(request , 'setting.html' )
+
+
+def chatboard(request):
+    return render(request , 'chat.html' )
+
+def forgot(request):
+    return render(request, 'forgot.html', {'name': 'hammed' })
+
+def botsetting(request):
+    return render(request, 'botset.html', {'name': 'hammed' })
+
+
+
+def integrat(request):
+    return render(request, 'intergrate.html', {'name': 'hammed' })
+
+
+# def custome_app(request):
+#     return render(request, 'custome.html', {'name': 'hammed' })
+
+def add_user(request):
+    return render(request, 'add_user.html', {'name': 'hammed' })
+
+def add_company(request):
+    return render(request, 'company.html', {'name': 'hammed' })
+
+
+def dashboard(request):
+    user_name = request.user.first_name if request.user.is_authenticated else None
+    return render(request, 'dashboard.html', {'user_nme': user_name })
+
+
+def vote(request, question_id):
+    question = get_object_or_404(Question, pk=question_id)
+    try:
+        selected_choice = question.choice_set.get(pk=request.POST["choice"])
+    except (KeyError, Choice.DoesNotExist ):
+        # Redisplay the question voting form.
+        return render(
+            request,
+            "test.html",
+            {
+                "question": question,
+                "error_message": "You didn't select a choice.",
+            },
+        )
+    else:
+        selected_choice.votes += 1
+        selected_choice.save()
+        # Always return an HttpResponseRedirect after successfully dealing
+        # with POST data. This prevents data from being posted twice if a
+        # user hits the Back button.
+        return HttpResponseRedirect(reverse("signup:vote", args=(question.id,)))
