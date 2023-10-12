@@ -6,9 +6,15 @@ from django.contrib.auth import authenticate, login
 from django.http import HttpResponse, HttpResponseRedirect
 from .models import Question, Choice, Article, Create_Acct
 from django.contrib.auth.models import User
-from django.contrib import messages 
-
+from django.http import JsonResponse
+import openai
  
+
+#   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
+
+openai_api_key  = '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'
+openai.api_key = openai_api_key
+
 def user(request):
     
 
@@ -131,10 +137,44 @@ def setting(request):
     return render(request , 'setting.html' )
 
 
-def chatboard(request):
-    return render(request , 'chat.html' )
+def ask_openai(message):
+    response = openai.ChatCompletion.create(
 
-def forgot(request):
+        model = "gpt-3.5-turbo",
+        messages=[
+            {"role": "system", "content": "You are an helpful assistant."},
+            {"role": "user", "content": message},
+        ]
+    )
+    
+    answer = response.choices[0].message.content.strip()
+    return answer
+
+def chatboard(request):
+    # chats = Chat.objects.filter(user=request.user)
+
+    if request.method == 'POST':
+        message = request.POST.get('message')
+        response = ask_openai(message)
+
+        # chat = Chat(user=request.user, message=message, response=response, created_at=timezone.now())
+        # chat.save()
+        return JsonResponse({'response': response})
+    return render(request, 'chat.html')
+
+def chatboard1(request):
+    # chats = Chat.objects.filter(user=request.user)
+
+    if request.method == 'POST':
+        message = request.POST.get('message')
+        # response = ask_openai(message)
+
+        # chat = Chat(user=request.user, message=message, response=response, created_at=timezone.now())
+        # chat.save()
+        # return JsonResponse({'message': message})
+    return render(request, 'chat1.html')
+
+def forgot(request): 
     return render(request, 'forgot.html', {'name': 'hammed' })
 
 def botsetting(request):
